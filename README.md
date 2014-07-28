@@ -1,4 +1,5 @@
 # idobata-yo - Pass Yo to Idobata
+![idobata.png](image/idobata.png)
 
 ## Installation
 This is expect deploy to Heroku
