@@ -14,8 +14,8 @@ configure do
 end
 
 get "/:yo_callback_path" do
-  return 400 unless params[:username]
-  return 400 unless params[:yo_callback_path] == ENV["YO_CALLBACK_PATH"]
+  halt 400 unless params[:username]
+  halt 400 unless params[:yo_callback_path] == ENV["YO_CALLBACK_PATH"]
 
   begin
     settings.faraday.post(nil, source: "Yo from #{params[:username]}")
